@@ -104,7 +104,6 @@ class VAEDecoder(nn.Module):
             for i in reversed(range(num_downs))
         ])
         
-        #平均と分散
         self.conv_out = nn.Conv2d(n_feat , self.in_channels, kernel_size=3, padding=1)
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
